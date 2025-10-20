@@ -45,3 +45,4 @@ These rules **must** be followed by any AI agent working on this project unless 
 
 - If you modify planning artifacts (`README.md`, `AGENTS.md`, etc.), note the rationale in your summary.
 - Update this file if team conventions evolve, and clearly state what changed.
+- When making commits, use the Conventional Commits format defined in `CONTRIBUTING.md`; common types include `feat`, `fix`, `docs`, `test`, `refactor`, `build`, and `chore`.
