@@ -8,10 +8,14 @@ default: help
 setup:
 	$(GO) install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 	$(GO) install mvdan.cc/gofumpt@latest
+	$(GO) install golang.org/x/tools/cmd/goimports@latest
 
 ## Build the CLI binary
 build:
 	$(GO) build ./...
+
+run:
+	@$(GO) run ./cmd/dcalc/main.go
 
 ## Run unit tests
 test:
@@ -25,9 +29,10 @@ lint: vet
 vet:
 	$(GO) vet ./...
 
-## Run gofmt on all source files
+## Run gofumpt + goimports on all source files
 format:
 	gofumpt -w $$(find . -name '*.go' -not -path './vendor/*')
+	goimports -w $$(find . -name '*.go' -not -path './vendor/*')
 
 ## Update go.mod/go.sum
 tidy:
