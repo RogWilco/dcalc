@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"os"
+
+	"github.com/rogwilco/dcalc/internal/cli"
+)
 
 func main() {
-	fmt.Println("Dimensional Calculator")
+	if err := cli.Execute(); err != nil {
+		os.Exit(1)
+	}
 }

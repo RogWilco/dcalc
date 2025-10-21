@@ -19,7 +19,7 @@ run:
 
 ## Run unit tests
 test:
-	$(GO) test ./...
+	$(GO) test --cover ./...
 
 ## Run golangci-lint and go vet
 lint: vet
