@@ -1,0 +1,20 @@
+# Go build artifacts
+/bin/
+/build/
+/dist/
+*.test
+*.out
+
+# OS and editor cruft
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.iml
+
+# Environment files
+.env
+.env.*
+
+# AI assistant files
+.claude
