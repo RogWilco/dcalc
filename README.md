@@ -74,6 +74,7 @@ Global Options:
 - Validate arithmetic for addition/subtraction/multiplication/division using known carpenter scenarios, ensuring precision snapping behaves as configured.
 - Verify dimensional bookkeeping: length÷length yields dimensionless ratios and count+remainder layouts; length÷scalar retains units; scalar÷length errors.
 - Exercise formatting outputs for fractional, decimal, and feet/inch styles, including carry/borrow and remainder rendering when applicable.
+- Use table-driven tests for parser scenarios where multiple input forms map to shared expectations.
 
 ### Module Layout (planned)
 
